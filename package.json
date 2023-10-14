@@ -2,6 +2,11 @@
   "name": "copy-context",
   "displayName": "copy-context",
   "description": "Copies a directory, file, or text snippet into a context string",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ntropish/copy-context.git"
+  },
+  "author": "Justin Stone",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.83.0"
