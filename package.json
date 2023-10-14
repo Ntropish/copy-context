@@ -1,0 +1,55 @@
+{
+  "name": "copy-context",
+  "displayName": "copy-context",
+  "description": "Copies a directory, file, or text snippet into a context string",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.copyContext",
+          "group": "9_cutcopypaste@4"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "extension.copyContextFile",
+          "group": "5_cutcopypaste@3"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "extension.copyContext",
+        "title": "Copy Context"
+      },
+      {
+        "command": "extension.copyContextFile",
+        "title": "Copy File Context"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.83.0",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "18.x",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
